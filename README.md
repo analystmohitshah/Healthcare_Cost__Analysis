@@ -1,10 +1,10 @@
-# 📊 Healthcare Expense Allocation & Analysis
+# Healthcare Expense Allocation & Analysis
 
-## 📌 Project Overview
+## Project Overview
 This project demonstrates how to transform transactional healthcare data into **analytical insights** by merging **expense** and **visit** datasets.  
 The analysis focuses on:
 - Calculating **expense per patient visit**
-- Determining **average expense per functional centre** (e.g., hospitals, long-term care, community services)
+- Determining **average expense per functional health centre** (e.g., hospitals, long-term care, community services)
 
 This type of analysis is crucial for **healthcare financial management**, enabling better:
 - Budget allocation
@@ -25,37 +25,32 @@ Both datasets share the keys:
 
 ## 🔑 Key Steps
 
-### 1️⃣ Merge Datasets
-- Join the **expenses** and **visits** tables on  
-  `organization_id` + `functional_centre_number`  
-- Retain key attributes:  
-  `organization_id`, `functional_centre_number`, `functional_centre_name`, `expenses`, `visits`
+1. **Merge Datasets**  
+   - Join `expenses` and `visits` on `organization_id` and `functional_centre_number`.  
+   - Retain attributes: `organization_id`, `functional_centre_number`, `functional_centre_name`, `expenses`, and `visits`.  
 
-### 2️⃣ Calculate Expense Per Visit
-Create a derived column:  
+2. **Calculate Expense Per Visit**  
+   ```python
+   merged_df["expense_per_visit"] = merged_df.apply(
+       lambda row: row["expenses"]/row["visits"] if row["visits"] > 0 else 0, axis=1
+   )s.
 
-\[
-\text{expense\_per\_visit} = \frac{\text{expenses}}{\text{visits}}
-\]
-
-⚠️ If `visits = 0`, set `expense_per_visit = 0` to avoid division errors.
-
-### 3️⃣ Compute Average Expense Per Functional Centre
-- Group by `functional_centre_number`, `functional_centre_name`  
+3. **Compute Average Expense Per health Centre**
+- Group by `health_centre_number`, `health_centre_name`  
 - Calculate the **mean expense per visit** for each centre  
 - Store results in a summary table  
 
 ---
 
-## 📈 Example Output
+## Example Output
 
-### 🔹 Final Merged Table (sample)
+### Final Merged Table (sample)
 | organization_id | functional_centre_number | functional_centre_name | expenses | visits | expense_per_visit |
 |-----------------|---------------------------|-------------------------|----------|--------|-------------------|
 | 101             | 5001                      | General Hospital        | 200000   | 400    | 500               |
 | 102             | 5002                      | Long-term Care          | 150000   | 300    | 500               |
 
-### 🔹 Average Expense per Functional Centre
+### Average Expense per Functional Centre
 | functional_centre_number | functional_centre_name | average_expense_per_visit |
 |---------------------------|-------------------------|----------------------------|
 | 5001                      | General Hospital        | 520                        |
@@ -64,25 +59,11 @@ Create a derived column:
 ---
 
 ## 📊 Visualization
-
-Using **Seaborn Boxplot** to compare distributions of expenses per visit across healthcare centres:  
-
-```python
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-plt.figure(figsize=(10,6))
-sns.boxplot(
-    data=merged_df,
-    x='functional_centre_name',
-    y='average_expense_per_visit'
-)
-plt.xticks(rotation=45)
-plt.title("Expense per Visit Distribution by Functional Centre")
-plt.show()
+**Matplotlib Bar Chat** for comparision on Function Unit (Health Centre)
+**Seaborn Boxplot** to compare distributions of expenses per visit across healthcare centres:  
 
 ---
-✅ Interpretation:
+# Interpretation:
 
 Hospitals show higher variability in expenses per visit.
 
@@ -91,17 +72,17 @@ Long-term care centres demonstrate more consistency in cost per visit.
 Outliers suggest potential inefficiencies or special cases (e.g., specialized treatments).
 
 ---
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Python (Pandas, NumPy)
+**Python** (Pandas, NumPy)
 
-Jupyter Notebook (for data cleaning & analysis)
+**Jupyter** Notebook (for data cleaning & analysis)
 
-Visualization: Matplotlib / Seaborn / Power BI
+**Visualization** (Matplotlib, Seaborn )
 
 ---
 
-🚀 How to Run
+## How to Run
 
 Clone the repository:
 
@@ -119,7 +100,7 @@ Run the notebook:
 jupyter notebook healthcare_expense_analysis.ipynb
 
 ---
-## Skills Demonstrated ##
+## Skills Demonstrated
 
 Data Cleaning & Preparation
 
@@ -132,11 +113,18 @@ Aggregation & Grouped Analysis
 Healthcare Financial Analytics Use Case
 
 ---
-📌 Future Improvements
 
-Add more data visualizations (bar charts, heatmaps)
+## Future Improvements
 
-Implement KNN imputation for missing visit counts
+Add more advanced visualizations (bar charts, heatmaps).
 
-Extend analysis to cover regional expense allocations across healthcare authorities
+Implement KNN imputation for missing visit counts instead of defaulting to 0.
+
+Extend analysis to cover regional expense allocations across healthcare authoritie
+
+---
+
+👤 Author: Mohit Shah
+📍 Ottawa, Canada
+🔗 LinkedIn
 
