@@ -1,0 +1,16 @@
+Organization ID,Health centre number,Health centre name,Expenses
+1,10,Medical Specialty Clinic,"5,000,000"
+1,50,Diabetes Specialty Clinic,"10,000,000"
+1,65,Metabolic Specialty Clinic,"12,500,000"
+1,82,Mental Health Specialty Clinic,"500,000"
+2,10,Medical Specialty Clinic,"3,000,000"
+2,50,Diabetes Specialty Clinic,"6,000,000"
+2,65,Metabolic Specialty Clinic,"15,000,000"
+2,82,Mental Health Specialty Clinic,"8,000,000"
+3,10,Medical Specialty Clinic,"2,600,000"
+3,50,Diabetes Specialty Clinic,"2,000,000"
+3,82,Mental Health Specialty Clinic,"4,000,000"
+,,,
+4,10,Medical Specialty Clinic,"3,000,000"
+4,50,Diabetes Specialty Clinic,"1,000,000"
+4,65,Metabolic Specialty Clinic,"350,000"

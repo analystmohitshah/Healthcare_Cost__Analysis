@@ -14,8 +14,8 @@ This type of analysis is crucial for **healthcare financial management**, enabli
 ---
 
 ## 🗂️ Data Sources
-- **Expenses Dataset** → Contains total healthcare expenses per organization and functional centre.  
-- **Visits Dataset** → Contains the number of patient visits per organization and functional centre.  
+- **Expenses Dataset** (path/to/datasets/expenses ) → Contains total healthcare expenses per organization and functional centre.  
+- **Visits Dataset** (path/to/datasets/visitss → Contains the number of patient visits per organization and functional centre.  
 
 Both datasets share the keys:
 - `organization_id` → unique identifier for each healthcare organization  
