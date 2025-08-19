@@ -90,18 +90,16 @@ Outliers suggest potential inefficiencies or special cases (e.g., specialized tr
 
 ## How to Run
 
-Clone the repository:
+- Clone the repository: [git clone](https://github.com/analystmohitshah/healthcare-expense-analysis)
 
-[git clone](https://github.com/analystmohitshah/healthcare-expense-analysis)
+- Install dependencies:
 
-Install dependencies:
-
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 
-Run the notebook:
+- Run the notebook:
 
-jupyter notebook healthcare_expense_analysis.ipynb
+- jupyter notebook healthcare_expense_analysis.ipynb
 
 ---
 ## Skills Demonstrated
