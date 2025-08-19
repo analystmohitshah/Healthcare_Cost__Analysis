@@ -1,0 +1,16 @@
+Organization ID,Health centre number,Health centre name,Visits
+1,10,Medical Specialty Clinic,"20,000"
+1,50,Diabetes Specialty Clinic,"44,444"
+1,65,Metabolic Specialty Clinic,"27,778"
+1,82,Mental Health Specialty Clinic,
+,,,
+2,10,Medical Specialty Clinic,"10,909"
+2,50,Diabetes Specialty Clinic,"20,690"
+2,65,Metabolic Specialty Clinic,"30,000"
+2,82,Mental Health Specialty Clinic,"32,000"
+3,10,Medical Specialty Clinic,"8,667"
+3,50,Diabetes Specialty Clinic,"6,154"
+3,82,Mental Health Specialty Clinic,
+4,10,Medical Specialty Clinic,"16,667"
+4,50,Diabetes Specialty Clinic,"8,000"
+4,65,Metabolic Specialty Clinic,583
