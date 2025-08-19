@@ -14,8 +14,13 @@ This type of analysis is crucial for **healthcare financial management**, enabli
 ---
 
 ## 🗂️ Data Sources
+<<<<<<< HEAD
 - **Expenses Dataset** (path/to/datasets/expenses ) → Contains total healthcare expenses per organization and functional centre.  
 - **Visits Dataset** (path/to/datasets/visitss → Contains the number of patient visits per organization and functional centre.  
+=======
+- [Uploading expenses.csv] → Contains total healthcare expenses per organization and functional centre.  
+-       → Contains the number of patient visits per organization and functional centre.  
+>>>>>>> 477279785e8db3eb73ed344c11aa55463475b0de
 
 Both datasets share the keys:
 - `organization_id` → unique identifier for each healthcare organization  
@@ -31,9 +36,10 @@ Both datasets share the keys:
 
 2. **Calculate Expense Per Visit**  
    ```python
-   merged_df["expense_per_visit"] = merged_df.apply(
-       lambda row: row["expenses"]/row["visits"] if row["visits"] > 0 else 0, axis=1
-   )s.
+merged_df['expense_per_visit'] = merged_df.apply(
+    lambda row: row['expenses'] / row['visits'] if row['visits'] > 0 else 0,
+    axis=1
+).round(2).
 
 3. **Compute Average Expense Per health Centre**
 - Group by `health_centre_number`, `health_centre_name`  
@@ -113,7 +119,7 @@ jupyter notebook healthcare_expense_analysis.ipynb
 
 - Feature Engineering (Derived Metrics)
 
--Aggregation & Grouped Analysis
+- Aggregation & Grouped Analysis
 
 - Healthcare Financial Analytics Use Case
 
