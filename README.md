@@ -4,7 +4,8 @@
 This project demonstrates how to transform transactional healthcare data into **analytical insights** by merging **expense** and **visit** datasets.  
 The analysis focuses on:
 - Calculating **expense per patient visit**
-- Determining **average expense per functional health centre** (e.g., hospitals, long-term care, community services)
+- Determining **average expense per health centre** (e.g., hospitals, long-term care, community services)
+- **Health centre** is the department or the unit in the organization.
 
 This type of analysis is crucial for **healthcare financial management**, enabling better:
 - Budget allocation
@@ -14,17 +15,12 @@ This type of analysis is crucial for **healthcare financial management**, enabli
 ---
 
 ## 🗂️ Data Sources
-<<<<<<< HEAD
-- **Expenses Dataset** (path/to/datasets/expenses ) → Contains total healthcare expenses per organization and functional centre.  
-- **Visits Dataset** (path/to/datasets/visitss → Contains the number of patient visits per organization and functional centre.  
-=======
-- [Uploading expenses.csv] → Contains total healthcare expenses per organization and functional centre.  
--       → Contains the number of patient visits per organization and functional centre.  
->>>>>>> 477279785e8db3eb73ed344c11aa55463475b0de
+- **Expenses Dataset** (path/to/datasets/expenses ) → Contains total healthcare expenses per organization and health centre (department).  
+- **Visits Dataset** (path/to/datasets/visits) → Contains the number of patient visits per organization and health centre (department).  
 
 Both datasets share the keys:
 - `organization_id` → unique identifier for each healthcare organization  
-- `functional_centre_number` → unique identifier for each functional centre  
+- `functional_centre_number` → unique identifier for each health centre  
 
 ---
 
