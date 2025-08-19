@@ -1,3 +1,6 @@
+Note: notebook file "healthcare_expense_analysis.ipynb" and datasets (expenses.csv, visits.csv) 
+      should be in the same folder in order to run the ipynb file successfully
+
 pandas
 numpy
 matplotlib
