@@ -1,4 +1,4 @@
-# Healthcare Expense Allocation & Analysis
+# Healthcare Expense Allocation & Analysis using Python
 
 ## Project Overview
 This project demonstrates how to transform transactional healthcare data into **analytical insights** by merging **expense** and **visit** datasets.  
@@ -45,22 +45,27 @@ Both datasets share the keys:
 ## Example Output
 
 ### Final Merged Table (sample)
-| organization_id | functional_centre_number | functional_centre_name | expenses | visits | expense_per_visit |
-|-----------------|---------------------------|-------------------------|----------|--------|-------------------|
-| 101             | 5001                      | General Hospital        | 200000   | 400    | 500               |
-| 102             | 5002                      | Long-term Care          | 150000   | 300    | 500               |
+| organization_id | health_centre_number | health_centre_name             | expenses | visits  | expense_per_visit |
+|-----------------|----------------------|--------------------------------|----------|---------|-------------------|
+|   1             | 82                   | Mental Health Specialty Clinic | 500000.0 | 0.0     | 0.0               |
+|   2             | 10                   | Medical Specialty Clinic       | 500000.0 | 10909.0 | 275.0             |
 
-### Average Expense per Functional Centre
-| functional_centre_number | functional_centre_name | average_expense_per_visit |
-|---------------------------|-------------------------|----------------------------|
-| 5001                      | General Hospital        | 520                        |
-| 5002                      | Long-term Care          | 480                        |
+
+
+### Average Expense per health Centre
+| health_centre_number | health_centre_name | average_expense_per_visit |
+|----------------------|---------------------------|--------------------|
+| 10                   | Medical Specialty Clinic  | 251.25             |
+| 50                   | Diabetes Specialty Clinic | 480                |
 
 ---
 
 ## 📊 Visualization
 **Matplotlib Bar Chat** for comparision on Function Unit (Health Centre)
+![barchart](https://github.com/user-attachments/assets/7fdacf23-16cd-4cfd-ae1f-a1087a8cead4)
+
 **Seaborn Boxplot** to compare distributions of expenses per visit across healthcare centres:  
+![boxplot](https://github.com/user-attachments/assets/9351bef3-6251-4c70-a63d-a66df6019d2d)
 
 ---
 # Interpretation:
@@ -102,29 +107,28 @@ jupyter notebook healthcare_expense_analysis.ipynb
 ---
 ## Skills Demonstrated
 
-Data Cleaning & Preparation
+- Data Cleaning & Preparation
 
-Data Merging & Joining in Pandas
+- Data Merging & Joining in Pandas
 
-Feature Engineering (Derived Metrics)
+- Feature Engineering (Derived Metrics)
 
-Aggregation & Grouped Analysis
+-Aggregation & Grouped Analysis
 
-Healthcare Financial Analytics Use Case
+- Healthcare Financial Analytics Use Case
 
 ---
 
 ## Future Improvements
 
-Add more advanced visualizations (bar charts, heatmaps).
+- Add more advanced visualizations (bar charts, heatmaps).
 
-Implement KNN imputation for missing visit counts instead of defaulting to 0.
+- Implement KNN imputation for missing visit counts instead of defaulting to 0.
 
-Extend analysis to cover regional expense allocations across healthcare authoritie
+- Extend analysis to cover regional expense allocations across healthcare authoritie
 
 ---
 
 👤 Author: Mohit Shah
-📍 Ottawa, Canada
-🔗 LinkedIn
+🔗 https://www.linkedin.com/in/analystmohitshah/
 
