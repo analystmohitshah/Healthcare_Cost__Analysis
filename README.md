@@ -92,9 +92,7 @@ Outliers suggest potential inefficiencies or special cases (e.g., specialized tr
 
 Clone the repository:
 
-git clone https://github.com/yourusername/healthcare-expense-analysis.git
-cd healthcare-expense-analysis
-
+[git clone](https://github.com/analystmohitshah/healthcare-expense-analysis)
 
 Install dependencies:
 
