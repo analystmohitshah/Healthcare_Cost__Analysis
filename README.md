@@ -15,7 +15,7 @@ This type of analysis is crucial for **healthcare financial management**, enabli
 ---
 
 ## 🗂️ Data Sources 
-- [expneses](https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/expenses.csv)) → Contains total healthcare expenses per organization and health centre (department).  
+- [expneses](https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/expenses.csv) → Contains total healthcare expenses per organization and health centre (department).  
 - [visits](https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/visits.csv) → Contains the number of patient visits per organization and health centre (department).  
 Both datasets share the keys:
 - `organization_id` → unique identifier for each healthcare organization  
@@ -26,8 +26,8 @@ Both datasets share the keys:
 ## 🔑 Key Steps
 
 1. **Merge Datasets**  
-   - Join `expenses` and `visits` on `organization_id` and `functional_centre_number`.  
-   - Retain attributes: `organization_id`, `functional_centre_number`, `functional_centre_name`, `expenses`, and `visits`.  
+   - Join `expenses` and `visits` on `organization_id` and `health_centre_number`.  
+   - Retain attributes: `organization_id`, `health_centre_number`, `health_centre_name`, `expenses`, and `visits`.  
 
 2. **Calculate Expense Per Visit**  
 ```python
