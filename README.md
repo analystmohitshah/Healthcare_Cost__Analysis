@@ -15,7 +15,7 @@ This type of analysis is crucial for **healthcare financial management**, enabli
 ---
 
 ## 🗂️ Data Sources 
-- **[Expenses Dataset]**([path/to/datasets ](https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/expenses.csv)) → Contains total healthcare expenses per organization and health centre (department).  
+- [Expenses Dataset]([path/to/datasets ](https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/expenses.csv)) → Contains total healthcare expenses per organization and health centre (department).  
 - **Visits Dataset**(https://github.com/analystmohitshah/healthcare-expense-analysis/blob/main/datasets/visits.csv) → Contains the number of patient visits per organization and health centre (department).  
 
 Both datasets share the keys:
